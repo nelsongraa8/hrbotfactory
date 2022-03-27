@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}jQuery ListFrutaController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <div id="nombre">
+        <span>Nombre: </span>
+        <input id="nombre_fruta" class="texto" type="text">
+        <button type="button" class="agregar">Agregar</button>
+    </div>
+
+    <div id="listado_frutas">
+        <ul>
+            <li>
+                Pera <button type="button">Borrar</button>
+            </li>
+            <li>
+                Manzana <button type="button">Borrar</button>
+            </li>
+            <li>
+                Naranja <button type="button">Borrar</button>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
