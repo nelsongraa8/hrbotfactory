@@ -4,6 +4,7 @@ namespace App\Tests;
 
 use PHPUnit\Framework\TestCase;
 use App\Service\SumaArray;
+use Psr\Log\LoggerInterface;
 
 class SumaArrayTest extends TestCase
 {
@@ -27,8 +28,7 @@ class SumaArrayTest extends TestCase
 
     private function methodArray($array, $resultArray)
     {
-        $array = [1, 4, 3, 0];
-        $sumaArray = new SumaArray($array);
+        $sumaArray = new SumaArray();
 
         $this->assertEquals($sumaArray($array), $resultArray);
     }
