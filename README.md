@@ -53,3 +53,52 @@ Los dos codigos anteriores darian el mismo resultado pero la diferencia esta en 
 
 ### Codigo Menos eficiente
 > [Done] exited with code=0 in 0.411 seconds
+
+
+# 4. ¿Qué función en PHP utilizarías para quitar todos los espacios de un string?
+
+Hay dos funciones que se pueden utilizar con PHP para eliminar los espacio en blanco de una cadena
+
+```[php]
+str_replace(
+    mixed $search,
+    mixed $replace,
+    mixed $subject,
+    int &$count = ?
+): mixed
+```
+``` [php]
+preg_replace(
+    mixed $pattern,
+    mixed $replacement,
+    mixed $subject,
+    int $limit = -1,
+    int &$count = ?
+): mixed
+```
+
+Un ejemplo del uso de str_replace()
+
+[Enlace a la documentacion de str_replace](https://www.php.net/manual/es/function.str-replace.php)
+
+``` [php]
+<?php
+$searchString = " ";
+$replaceString = "";
+$originalString = "Esta es la prueba de hrbotfactory";
+
+$outputString = str_replace($searchString, $replaceString, $originalString);
+```
+
+
+Un ejemplo del uso de preg_replace()
+
+[Enlace a la documentacion de preg_replace](https://www.php.net/manual/es/function.preg-replace.php)
+
+``` [php]
+$searchString = " ";
+$replaceString = "";
+$originalString = "Esta es la prueba de hrbotfactory";
+
+$outputString = preg_replace('/\s+/', '', $originalString);
+```
