@@ -4,7 +4,6 @@ namespace App\Tests;
 
 use PHPUnit\Framework\TestCase;
 use App\Service\SumaArray;
-use Psr\Log\LoggerInterface;
 
 class SumaArrayTest extends TestCase
 {
