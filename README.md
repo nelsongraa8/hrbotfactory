@@ -3,11 +3,12 @@
 
 La respuesta a este ejercicio esta en el codigo del proyecto en
 
-App\Service\SumaArray
+> App\Service\SumaArray
 
 Tiene un test de verificacion para comprobar que el algoritmo responde a los casos de uso presentado
 
-App/Tests/SumaArrayTest
+> App/Tests/SumaArrayTest
+
 
 # 2. ¿Encuentras algo raro en el siguiente código? ¿Por qué?
 
@@ -55,6 +56,22 @@ Los dos codigos anteriores darian el mismo resultado pero la diferencia esta en 
 > [Done] exited with code=0 in 0.411 seconds
 
 
+# 3. ¿Cuál de estas afirmaciones es correcta sobre un método estático?
+> Los métodos estáticos no proveen una referencia a $this.
+
+Los metodos estaticos no se llaman con $this, $this es una pseudovariable que permite hacer referencia al metodo o atributo de un objeto instanciado, en el caso de un metodo statico la llamada se haria
+
+``` [php]
+ClaseDelMetodoEstatico::metodoEstatico()
+```
+
+si la referencia al metodo estatico lo hacemos dentro de la clase que lo contenga se usa la palabra reservado 'self'
+
+``` [php]
+self::metodoEstatico()
+```
+
+
 # 4. ¿Qué función en PHP utilizarías para quitar todos los espacios de un string?
 
 Hay dos funciones que se pueden utilizar con PHP para eliminar los espacio en blanco de una cadena
@@ -89,7 +106,6 @@ $originalString = "Esta es la prueba de hrbotfactory";
 
 $outputString = str_replace($searchString, $replaceString, $originalString);
 ```
-
 
 Un ejemplo del uso de preg_replace()
 
